@@ -1,7 +1,7 @@
 {
-  "name": "Doraemond",
-  "version": "2.0.1",
-  "description": "WhatsApp Bot Ringan",
+  "name": "ᴍᴜʀꜱɪᴅ",
+  "version": "2.5.1",
+  "description": "Customizable WhatsApp Bot",
   "main": "index.js",
   "scripts": {
     "start": "node index.js --self",
@@ -14,7 +14,7 @@
   "keywords": [
     "whatsapp-bot"
   ],
-  "author": "Dora",
+  "author": "Sid",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ariffb25/stikerinbot/issues"
