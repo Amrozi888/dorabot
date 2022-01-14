@@ -1,5 +1,5 @@
 let fs = require('fs')
-global.owner = ['6282387704390','6289601145546'] // Letakan nomor kamu disini
+global.owner = ['6288233832771','6288233832771'] // Letakan nomor kamu disini
 global.mods = [''] // Moderator?
 global.prems = JSON.parse(fs.readFileSync('./src/premium.json')) // Pengguna premium tidak memerlukan limit
 global.APIs = { // API Prefix
@@ -36,10 +36,10 @@ global.APIKeys = { // APIKey nya disini
 }
 
 // Sticker WM
-global.packname = 'saya harap kamu bahagia'
-global.author = 'Dora'
+global.packname = 'Bot WhatsApp'
+global.author = 'Mursid'
 
-global.wait = '「 ⏱️ 」Harap tunggu...'
+global.wait = '「 ⏱️ 」Harap tunggu om...'
 global.eror = '「❗」Server ERROR!'
 global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text='
 global.watermark = '© Doraemond' //change the watermark (beberapa harus manual)
