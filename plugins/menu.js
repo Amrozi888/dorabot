@@ -20,11 +20,8 @@ const defaultMenu = {
 │
 ├ Uptime: *%uptime (%muptime)*
 ├ Database: %rtotalreg dari %totalreg
-├
-├ Berusahalah untuk patah 
-├ semangat dan tetaplah 
-├ menjadi pecundang,
-├ hidup mu adalah kesia-siaan.㋛
+├ Github:
+├ %github
 └────
 %readmore`.trimStart(),
   header: '┌─〔 %category 〕',
@@ -189,148 +186,36 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       }
     })
     if (teks == '404') {
-      return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
-        "listMessage": {
-          "title": `${ucapan()}, ${name}`.trim(),
-          "description": "© Doraemond",
-          "buttonText": "Klik Disini",
-          "listType": "SINGLE_SELECT",
-          "sections": [
-            {
-              "rows": [
-                {
-                  "title": `📜 ㋛ Semua Perintah`,
-                  "description": "Menampilkan semua perintah bot",
-                  "rowId": ".? all"
-                }, {
-                  "title": "🎮 ㋛ game",
-                  "description": "All game",
-                  "rowId": ".? game"
-
-                }, {
-                  "title": "💳 ㋛ XP",
-                  "description": "XP pemakain Bot",
-                  "rowId": ".? xp"
-
-                }, {
-                  "title": "🖼 ㋛ Stiker",
-                  "description": "maker stiker",
-                  "rowId": ".? stiker"
-                }, {
-                  "title": "🐚 ㋛ Kerang Ajaib",
-                  "description": "Ask something question",
-                  "rowId": ".? kerangajaib"
-                }, {
-                  "title": "📝 ㋛ Quotes",
-                  "description": "Kata-kata bijak",
-                  "rowId": ".? quotes"
-                }, {
-                  "title": "🕴 ㋛ Admin",
-                  "description": "Para elite tapi bukan mastah ㋛",
-                  "rowId": ".? admin"
-                }, {
-                  "title": "👥 ㋛ Grup",
-                  "description": "Using di Grup doang anjir",
-                  "rowId": ".? grup"
-                }, {
-                  "title": "💎 ㋛ Premium",
-                  "description": "wow para elite ⚡",
-                  "rowId": ".? premium"
-                }, {
-                  "title": "📡 ㋛ Internet",
-                  "description": "expression your u want",
-                  "rowId": ".? internet"
-                }, {
-                  "title": "❓ ㋛ Anonymous",
-                  "description": "hacker anjir 😱",
-                  "rowId": ".? anonymous"
-                }, {
-                  "title": "✏ ㋛ Nulis & Logo",
-                  "description": "Make a tulisan",
-                  "rowId": ".? nulis"
-                }, {
-                  "title": "📥 ㋛ Downloader",
-                  "description": "Mengunduh ",
-                  "rowId": ".? downloader"
-                }, {
-                  "title": "🛠 ㋛ Tools",
-                  "description": "Reparations",
-                  "rowId": ".? tools"
-                }, {
-                  "title": "😋 ㋛ Fun ",
-                  "description": "Bebas ngapain aja",
-                  "rowId": ".? fun"
-                }, {
-                  "title": "🗂 ㋛ Database",
-                  "description": "Data base bot",
-                  "rowId": ".? database"
-                }, {
-                  "title": "☑ ㋛ vote & Absen",
-                  "description": "isi absen dulu anjir",
-                  "rowId": ".? vote"
-                }, {
-                  "title": "😊😇 Al-Qur\'an",
-                  "description": "Mengaji",
-                  "rowId": ".? quran"
-                }, {
-                  "title": "〰🎵 ㋛ Pengubah Suara",
-                  "description": "Manipulation your voice",
-                  "rowId": ".? audio"
-                }, {
-                  "title": "🗿 ㋛ Jadi Bot",
-                  "description": "Jangan di pake cape gua ",
-                  "rowId": ".? jadibot"
-                }, {
-                  "title": "ℹℹ ㋛ info",
-                  "description": "information ",
-                  "rowId": ".? info"
-                }, {
-                  "title": "⁉ ㋛ Tanpa Kategori",
-                  "description": "serah lu mau ngapain anjir",
-                  "rowId": ".? tanpakategori"
-                }, {
-                  "title": "👺 ㋛ Owner",
-                  "description": "Menu mastah",
-                  "rowId": ".? owner"
-                }
-              ]
-            }
-          ], "contextInfo": {
-            "stanzaId": m.key.id,
-            "participant": m.sender,
-            "quotedMessage": m.message
-          }
-        }
-      }, {}), { waitForAck: true })
-    }
+      
     // gunakan ini jika kamu menggunakan whatsapp bisnis
-    //   throw `
-    // ┌〔 DAFTAR MENU 〕
-    // ├ ${_p + command} all
-    // ├ ${_p + command} game
-    // ├ ${_p + command} xp
-    // ├ ${_p + command} stiker
-    // ├ ${_p + command} kerang
-    // ├ ${_p + command} quotes
-    // ├ ${_p + command} admin
-    // ├ ${_p + command} group
-    // ├ ${_p + command} premium
-    // ├ ${_p + command} internet
-    // ├ ${_p + command} anonymous
-    // ├ ${_p + command} nulis
-    // ├ ${_p + command} downloader
-    // ├ ${_p + command} tools
-    // ├ ${_p + command} fun
-    // ├ ${_p + command} database
-    // ├ ${_p + command} vote
-    // ├ ${_p + command} quran
-    // ├ ${_p + command} audio
-    // ├ ${_p + command} jadibot
-    // ├ ${_p + command} info
-    // ├ ${_p + command} tanpa kategori
-    // ├ ${_p + command} owner
-    // └────  
-    //     `.trim()
+       throw `
+     ┌〔 DAFTAR MENU 〕
+     ├ ${_p + command} all
+     ├ ${_p + command} game
+     ├ ${_p + command} xp
+     ├ ${_p + command} stiker
+     ├ ${_p + command} kerang
+     ├ ${_p + command} quotes
+     ├ ${_p + command} admin
+     ├ ${_p + command} group
+     ├ ${_p + command} premium
+     ├ ${_p + command} internet
+     ├ ${_p + command} anonymous
+     ├ ${_p + command} nulis
+     ├ ${_p + command} downloader
+     ├ ${_p + command} tools
+     ├ ${_p + command} fun
+     ├ ${_p + command} database
+     ├ ${_p + command} vote
+     ├ ${_p + command} quran
+     ├ ${_p + command} audio
+     ├ ${_p + command} jadibot
+     ├ ${_p + command} info
+     ├ ${_p + command} tanpa kategori
+     ├ ${_p + command} owner
+     └────  
+         `.trim()
+    }
     let groups = {}
     for (let tag in tags) {
       groups[tag] = []
@@ -380,7 +265,8 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send2ButtonLoc(m.chat, await (await fetch(fla + teks)).buffer(), text.trim(), watermark, 'Pemilik Bot', '.owner', 'Donasi', '.donasi', m)
+    await conn.fakeReply(m.chat, 'Loading...', '0@s.whatsapp.net', 'BY MURSID (+6288233832771)', 'status@broadcast')
+    conn.send2ButtonLoc(m.chat, await (await fetch(fla + teks)).buffer(), text.trim(), '© Mursid Bot', 'Owner', `${_p}owner`, 'Donasi', `${_p}donasi`, m)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
