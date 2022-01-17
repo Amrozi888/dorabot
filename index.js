@@ -4,13 +4,13 @@ let path = require('path')
 let fs = require('fs')
 let package = require('./package.json')
 const CFonts = require('cfonts')
-CFonts.say('Dora', {
+CFonts.say('Mursid', {
   colors: ['#f2aa4c'],
   font: 'chrome',
   align: 'center',
   gradient: ['red', 'magenta']
 })
-CFonts.say(`'Doraemond' welcome`, {
+CFonts.say(`'Mursid' welcome`, {
   colors: ['#f2aa4c'],
   font: 'console',
   align: 'center',
