@@ -9,14 +9,13 @@ handler.all = async function (m, { isBlocked }) {
     let setting = db.data.settings[this.user.jid]
     let { isBanned } = db.data.chats[m.chat]
     let { banned } = db.data.users[m.sender]
-    let name = conn.user.name
 
     // ketika ditag
     try {
         if (m.mentionedJid.includes(this.user.jid) && m.isGroup) {
             await this.send2Button(m.chat,
-                isBanned ? `${name} lagi tidur` : banned ? 'kamu dibanned' : `${name} disini`,
-                watermark,
+                isBanned ? 'maad erza sedang tidak aktif' : banned ? 'kamu dibanned' : 'Erza disini',
+                'ᴍᴜʀꜱɪᴅ ʙᴏᴛ2.5.1',
                 isBanned ? 'Unban' : banned ? 'Pemilik Bot' : 'Menu',
                 isBanned ? '.unban' : banned ? '.owner' : '.?',
                 m.isGroup ? 'Ban' : isBanned ? 'Unban' : 'Donasi',
@@ -28,14 +27,16 @@ handler.all = async function (m, { isBlocked }) {
 
     // ketika ada yang invite/kirim link grup di chat pribadi
     if ((m.mtype === 'groupInviteMessage' || m.text.startsWith('https://chat') || m.text.startsWith('Buka tautan ini')) && !m.isBaileys && !m.isGroup) {
-        this.send2Button(m.chat, `┌〔 Undang Bot ke Grup 〕
-├ 3 Hari / GRATIS 
-├ 7 Hari / Rp7.000
-├ 30 Hari / Rp10.000
+        this.sendButton(m.chat, `┌〔 Undang Bot ke Grup 〕
+├ 3 Hari / Rp 10,000
+├ 7 Hari / Rp 20,000
+├ 30 Hari / Rp 30,000
+├ Free / Exp 1 Hari
+├ Permanen / Rp 100,000
 └────
 
-
-`.trim(), watermark, 'Pemilik Bot', ',owner', 'Cara memasukkan bot', '.how add', m)
+https://erza-info.ml
+`.trim(), 'ᴍᴜʀꜱɪᴅ ʙᴏᴛ2.5.1', 'Pemilik Bot', ',owner', m)
     }
 
     // salam
@@ -65,7 +66,7 @@ handler.all = async function (m, { isBlocked }) {
     if (new Date() * 1 - setting.status > 1000) {
         let _uptime = process.uptime() * 1000
         let uptime = clockString(_uptime)
-        // await this.setStatus(`Aktif selama ${uptime} | Mode: ${global.opts['self'] ? 'Private' : setting.groupOnly ? 'Hanya Grup' : 'Publik'} |Dora bot oleh Mr nolep pembuat bot`).catch(_ => _) // disable jika kamu tidak suka dengan ini
+        await this.setStatus(`Aktif selama ${uptime}`).catch(_ => _)
         setting.status = new Date() * 1
     }
 
