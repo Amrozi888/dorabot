@@ -17,12 +17,10 @@ const defaultMenu = {
 ├ Tanggal: *%week %weton, %date*
 ├ Tanggal Islam: *%dateIslamic*
 ├ Waktu: *%time*
-├ FITUR BOT BANYAK YANG EROR MAKLUM GRATISAN:)
 │
 ├ Uptime: *%uptime (%muptime)*
 ├ Database: %rtotalreg dari %totalreg
-├ Github:
-├ %github
+├ apikey abis makanya error :v
 └────
 %readmore`.trimStart(),
   header: '┌─〔 %category 〕',
@@ -187,36 +185,148 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       }
     })
     if (teks == '404') {
-      
-    // gunakan ini jika kamu menggunakan whatsapp bisnis
-       throw `
-     ┌〔 DAFTAR MENU 〕
-     ├ ${_p + command} all
-     ├ ${_p + command} game
-     ├ ${_p + command} xp
-     ├ ${_p + command} stiker
-     ├ ${_p + command} kerang
-     ├ ${_p + command} quotes
-     ├ ${_p + command} admin
-     ├ ${_p + command} group
-     ├ ${_p + command} premium
-     ├ ${_p + command} internet
-     ├ ${_p + command} anonymous
-     ├ ${_p + command} nulis
-     ├ ${_p + command} downloader
-     ├ ${_p + command} tools
-     ├ ${_p + command} fun
-     ├ ${_p + command} database
-     ├ ${_p + command} vote
-     ├ ${_p + command} quran
-     ├ ${_p + command} audio
-     ├ ${_p + command} jadibot
-     ├ ${_p + command} info
-     ├ ${_p + command} tanpa kategori
-     ├ ${_p + command} owner
-     └────  
-         `.trim()
+      return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
+        "listMessage": {
+          "title": `${ucapan()}, ${name}`.trim(),
+          "description": "© Putbotz",
+          "buttonText": "Klik Disini Jangan Spam",
+          "listType": "SINGLE_SELECT",
+          "sections": [
+            {
+              "rows": [
+                {
+                  "title": `Semua Perintah`,
+                  "description": "",
+                  "rowId": `${_p}? all`
+                }, {
+                  "title": "Game",
+                  "description": "",
+                  "rowId": `${_p}? game`
+
+                }, {
+                  "title": "XP",
+                  "description": "",
+                  "rowId": `${_p}? xp`
+
+                }, {
+                  "title": "Stiker",
+                  "description": "",
+                  "rowId": `${_p}? stiker`
+                }, {
+                  "title": "Kerang Ajaib",
+                  "description": "",
+                  "rowId": `${_p}? kerangajaib`
+                }, {
+                  "title": "Quotes",
+                  "description": "",
+                  "rowId": `${_p}? quotes`
+                }, {
+                  "title": "Admin",
+                  "description": "",
+                  "rowId": `${_p}? admin`
+                }, {
+                  "title": "Grup",
+                  "description": "",
+                  "rowId": `${_p}? grup`
+                }, {
+                  "title": "Premium",
+                  "description": "",
+                  "rowId": `${_p}? premium`
+                }, {
+                  "title": "Internet",
+                  "description": "",
+                  "rowId": `${_p}? internet`
+                }, {
+                  "title": "Anonymous",
+                  "description": "",
+                  "rowId": `${_p}? anonymous`
+                }, {
+                  "title": "Nulis & Logo",
+                  "description": "",
+                  "rowId": `${_p}? nulis`
+                }, {
+                  "title": "Downloader",
+                  "description": "",
+                  "rowId": `${_p}? downloader`
+                }, {
+                  "title": "Tools",
+                  "description": "",
+                  "rowId": `${_p}? tools`
+                }, {
+                  "title": "Fun",
+                  "description": "",
+                  "rowId": `${_p}? fun`
+                }, {
+                  "title": "Database",
+                  "description": "",
+                  "rowId": `${_p}? database`
+                }, {
+                  "title": "Vote & Absen",
+                  "description": "",
+                  "rowId": `${_p}? vote`
+                }, {
+                  "title": "Al-Qur\'an",
+                  "description": "",
+                  "rowId": `${_p}? quran`
+                }, {
+                  "title": "Pengubah Suara",
+                  "description": "",
+                  "rowId": `${_p}? audio`
+                }, {
+                  "title": "Jadi Bot",
+                  "description": "",
+                  "rowId": `${_p}? jadibot`
+                }, {
+                  "title": "Info",
+                  "description": "",
+                  "rowId": `${_p}? info`
+                }, {
+                  "title": "Tanpa Kategori",
+                  "description": "",
+                  "rowId": `${_p}? tanpakategori`
+                }, {
+                  "title": "Owner",
+                  "description": "",
+                  "rowId": `${_p}? owner`
+                }
+              ]
+            }
+          ], "contextInfo": {
+            "stanzaId": m.key.id,
+            "participant": m.sender,
+            "quotedMessage": m.message
+          }
+        }
+      }, {}), { waitForAck: true })
     }
+    // gunakan ini jika kamu menggunakan whatsapp bisnis
+    //   throw `
+    // ┌〔 DAFTAR MENU 〕
+    // ├ ${_p + command} all
+    // ├ ${_p + command} game
+    // ├ ${_p + command} xp
+    // ├ ${_p + command} stiker
+    // ├ ${_p + command} kerang
+    // ├ ${_p + command} quotes
+    // ├ ${_p + command} admin
+    // ├ ${_p + command} group
+    // ├ ${_p + command} premium
+    // ├ ${_p + command} internet
+    // ├ ${_p + command} anonymous
+    // ├ ${_p + command} nulis
+    // ├ ${_p + command} downloader
+    // ├ ${_p + command} tools
+    // ├ ${_p + command} fun
+    // ├ ${_p + command} database
+    // ├ ${_p + command} vote
+    // ├ ${_p + command} quran
+    // ├ ${_p + command} audio
+    // ├ ${_p + command} jadibot
+    // ├ ${_p + command} info
+    // ├ ${_p + command} tanpa kategori
+    // ├ ${_p + command} owner
+    // └────  
+    //     `.trim()
     let groups = {}
     for (let tag in tags) {
       groups[tag] = []
@@ -266,10 +376,9 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.fakeReply(m.chat, 'Loading...', '0@s.whatsapp.net', 'BY MURSID (+6288233832771)', 'status@broadcast')
-    conn.send2ButtonLoc(m.chat, await (await fetch(fla + teks)).buffer(), text.trim(), '© ᴍᴜʀꜱɪᴅ ʙᴏᴛ', 'Owner', `${_p}owner`, 'Donasi', `${_p}donasi`, m)
+    await conn.send2ButtonLoc(m.chat, await (await fetch(fla + teks)).buffer(), text.trim(), 'MURSID BOT', 'Pemilik Bot', `${_p}owner`, 'Donasi', `${_p}donasi`, m)
   } catch (e) {
-    conn.reply(m.chat, 'Pesan sementara ON', m)
+    conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
   }
 }
@@ -303,16 +412,16 @@ function ucapan() {
   const time = moment.tz('Asia/Jakarta').format('HH')
   res = "Selamat dinihari"
   if (time >= 4) {
-    res = "Selamat pagi"
+    res = "Good morning <3"
   }
   if (time > 10) {
-    res = "Selamat siang"
+    res = "Good morning <3"
   }
   if (time >= 15) {
-    res = "Selamat sore"
+    res = "good afternoon<3"
   }
   if (time >= 18) {
-    res = "Selamat malam"
+    res = "Good night jan bergadang ya ntar sakit <3"
   }
   return res
 }
