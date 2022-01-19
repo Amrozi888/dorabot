@@ -14,8 +14,8 @@ handler.all = async function (m, { isBlocked }) {
     try {
         if (m.mentionedJid.includes(this.user.jid) && m.isGroup) {
             await this.send2Button(m.chat,
-                isBanned ? 'maad erza sedang tidak aktif' : banned ? 'kamu dibanned' : 'Erza disini',
-                'ᴍᴜʀꜱɪᴅ ʙᴏᴛ2.5.1',
+                isBanned ? 'stikerin tidak aktif' : banned ? 'kamu dibanned' : 'stikerin disini',
+                '© stikerin',
                 isBanned ? 'Unban' : banned ? 'Pemilik Bot' : 'Menu',
                 isBanned ? '.unban' : banned ? '.owner' : '.?',
                 m.isGroup ? 'Ban' : isBanned ? 'Unban' : 'Donasi',
@@ -28,15 +28,15 @@ handler.all = async function (m, { isBlocked }) {
     // ketika ada yang invite/kirim link grup di chat pribadi
     if ((m.mtype === 'groupInviteMessage' || m.text.startsWith('https://chat') || m.text.startsWith('Buka tautan ini')) && !m.isBaileys && !m.isGroup) {
         this.sendButton(m.chat, `┌〔 Undang Bot ke Grup 〕
-├ 3 Hari / Rp 10,000
-├ 7 Hari / Rp 20,000
-├ 30 Hari / Rp 30,000
-├ Free / Exp 1 Hari
+├ 3  Hari / Rp 10,000
+├ 7  Hari / Rp 20,000
+├ 12 Hari / Rp 30,000
+├ 16 Hari / Rp 40,000
 ├ Permanen / Rp 100,000
 └────
 
-https://erza-info.ml
-`.trim(), 'ᴍᴜʀꜱɪᴅ ʙᴏᴛ2.5.1', 'Pemilik Bot', ',owner', m)
+https://github.com/ariffb25/stikerinbot
+`.trim(), '© MURSID', 'Pemilik Bot', ',owner', m)
     }
 
     // salam
@@ -66,7 +66,7 @@ https://erza-info.ml
     if (new Date() * 1 - setting.status > 1000) {
         let _uptime = process.uptime() * 1000
         let uptime = clockString(_uptime)
-        await this.setStatus(`Aktif selama ${uptime}`).catch(_ => _)
+        await this.setStatus(`Aktif selama ${uptime} | Mode: ${global.opts['self'] ? 'Private' : setting.groupOnly ? 'Hanya Grup' : 'Publik'} | MURSID BOT oleh Mei Cans`).catch(_ => _)
         setting.status = new Date() * 1
     }
 
