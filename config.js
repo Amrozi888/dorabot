@@ -1,53 +1,46 @@
 let fs = require('fs')
-global.owner = ['6288233832771','6288233832771'] // Letakan nomor kamu disini
-global.mods = [''] // Moderator?
-global.prems = JSON.parse(fs.readFileSync('./src/premium.json')) // Pengguna premium tidak memerlukan limit
+let chalk = require('chalk')
+
+global.owner = ['6288233832771', '6288233832771'] // Letakan nomor kamu disini
+
 global.APIs = { // API Prefix
   // nama: 'https://website'
-  LeysCoder: 'https://leyscoders-api.herokuapp.com',
+  bx: 'https://bx-hunter.herokuapp.com',
+  rey: 'https://server-api-rey.herokuapp.com',
+  dhnjing: 'https://dhnjing.xyz',
   hardianto: 'https://hardianto-chan.herokuapp.com',
-  jonaz: 'https://jonaz-api-v2.herokuapp.com',
-  neoxr: 'https://neoxr-api.herokuapp.com',
+  neoxr: 'https://api.neoxr.eu.org',
   nrtm: 'https://nurutomo.herokuapp.com',
   pencarikode: 'https://pencarikode.xyz',
+  waifupics: 'https://api.waifu.pics',
   xteam: 'https://api.xteam.xyz',
-  zahir: 'https://zahirr-web.herokuapp.com',
-  zekais: 'http://zekais-api.herokuapp.com',
   zeks: 'https://api.zeks.xyz',
-  vhtear: 'https://api.vhtear.com',
-  lolhum: 'https://api.lolhuman.xyz',
-  fxc7: 'https://fxc7-api.herokuapp.com',
-  aqul: 'https://api.justaqul.xyz'
-
 }
 global.APIKeys = { // APIKey nya disini
   // 'https://website': 'apikey'
-  'https://leyscoders-api.herokuapp.com': 'MIMINGANZ',
+  'https://server-api-rey.herokuapp.com': 'apirey',
+  'https://bx-hunter.herokuapp.com': 'Ikyy69',
   'https://hardianto-chan.herokuapp.com': 'hardianto',
   'https://neoxr-api.herokuapp.com': 'yntkts',
-  'https://pencarikode.xyz': 'APIKEY',
-  'https://api.xteam.xyz': '3b710272e0090cdb',
-  'https://zahirr-web.herokuapp.com': 'zahirgans',
-  'https://api.zeks.xyz': 'FVe0JFCdME58YSKmhoDWdRtyuJt',
-  'https://api.lolhuman.xyz': 'WajibPatunganKontol!!',
-  'https://api.vhtear.com': 'sayahafiz',
-  'https://fxc7-api.herokuapp.com': 'uN8rsK4g',
-  'https://api.justaqul.xyz': '5kbUqdG00OXelFYx'
+  'https://pencarikode.xyz': 'pais',
+  'https://api.xteam.xyz': 'cecdb90f3153298c',
+  'https://api.zeks.xyz': 'uLWJTl4xWh2vDQod9O3LcOcQOIS',
 }
 
 // Sticker WM
 global.packname = 'Bot WhatsApp'
 global.author = 'Mursid'
 
-global.wait = '「 ⏱️ 」Harap tunggu om...'
-global.eror = '「❗」Server ERROR!'
-global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text='
-global.watermark = '© MURSID BOT' //change the watermark (beberapa harus manual)
-global.image = 'https://telegra.ph/file/1893a59e90a39b1f593c7.jpg' //change the image
+global.wm = '© MURSID BOT'
+global.eror = '_*ok*_'
+global.wait = '_*Masih Loading Om...*_'
+global.benar = '✅'
+global.salah = '❌'
+global.dikit = 'dikit lagi'
+global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&fillColor1Color=%23f2aa4c&fillColor2Color=%23f2aa4c&fillColor3Color=%23f2aa4c&fillColor4Color=%23f2aa4c&fillColor5Color=%23f2aa4c&fillColor6Color=%23f2aa4c&fillColor7Color=%23f2aa4c&fillColor8Color=%23f2aa4c&fillColor9Color=%23f2aa4c&fillColor10Color=%23f2aa4c&fillOutlineColor=%23f2aa4c&fillOutline2Color=%23f2aa4c&backgroundColor=%23101820&text='
 
-global.multiplier = 59 // Semakin tinggi, semakin sulit naik level
+global.multiplier = 69 // Semakin tinggi, semakin sulit naik level
 
-let chalk = require('chalk')
 let file = require.resolve(__filename)
 fs.watchFile(file, () => {
   fs.unwatchFile(file)
