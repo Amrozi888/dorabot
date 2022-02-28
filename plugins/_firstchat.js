@@ -12,7 +12,7 @@ handler.all = async function (m) {
     let name = conn.user.name
     if (new Date - user.pc < 86400000) return // setiap 24 jam sekali
     await conn.send3ButtonLoc(m.chat, await(await fetch(image)).buffer(), `
-Hai, ${ucapan()}
+Hai<3, ${ucapan()}
 
 ${user.banned ? 'kamu dibanned' : `Saya adalah ${name}, salah satu Bot Whatsapp. harap tidak spam/telpon/minta save ke nomor ini. Ada yang bisa saya bantu?`}
 `.trim(), watermark, user.banned ? 'Pemilik Bot' : 'Menu', user.banned ? ',owner' : ',?', 'Panduan penggunaan', '.panduan', 'Rules', '.rules', m)
