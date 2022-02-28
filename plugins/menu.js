@@ -6,21 +6,21 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 const defaultMenu = {
   before: `
-┌─〔 %me 〕
-├ Hai, %name!
+┌─〔 Botynyakamu 〕
+├ Hai👋, %name!
 │
-├ Tersisa *%limit Limit*
+├ 💸Tersisa *%limit Limit*
 ├ Role *%role*
-├ Level *%level (%exp / %maxexp)* [%xp4levelup]
+├ 🎚Level *%level (%exp / %maxexp)* [%xp4levelup]
 ├ %totalexp XP secara Total
 │ 
-├ Tanggal: *%week %weton, %date*
-├ Tanggal Islam: *%dateIslamic*
-├ Waktu: *%time*
+├ 🗓Tanggal: *%week %weton, %date*
+├ 🕌Tanggal Islam: *%dateIslamic*
+├ ⌚️Waktu: *%time*
 │
 ├ Uptime: *%uptime (%muptime)*
 ├ Database: %rtotalreg dari %totalreg
-├ Instagram
+├📷 Instagram
 ├ instagram.com/botynyakamu_02
 └────
 %readmore`.trimStart(),
@@ -189,7 +189,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
         "listMessage": {
           "title": `${ucapan()}, ${name}`.trim(),
-          "description": "© Putbotz",
+          "description": "©️ Putbotz",
           "buttonText": "Klik Disini Jangan Spam",
           "listType": "SINGLE_SELECT",
           "sections": [
@@ -377,7 +377,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send2ButtonLoc(m.chat, await (await fetch(fla + teks)).buffer(), text.trim(), '©BOTYNYAKAMU', 'Pemilik Bot', `${_p}owner`, 'Donasi', `${_p}donasi`, m)
+    await conn.send2ButtonLoc(m.chat, await (await fetch(fla + teks)).buffer(), text.trim(), '©️BOTYNYAKAMU', 'Pemilik Bot', `${_p}owner`, 'Donasi', `${_p}donasi`, m)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
