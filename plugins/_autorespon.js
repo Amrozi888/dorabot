@@ -36,7 +36,7 @@ handler.all = async function (m, { isBlocked }) {
 └────
 
 https://github.com/ariffb25/stikerinbot
-`.trim(), '© MURSID', 'Pemilik Bot', ',owner', m)
+`.trim(), '© BOTYNYAKAMU', 'Pemilik Bot', ',owner', m)
     }
 
     // salam
@@ -66,7 +66,7 @@ https://github.com/ariffb25/stikerinbot
     if (new Date() * 1 - setting.status > 1000) {
         let _uptime = process.uptime() * 1000
         let uptime = clockString(_uptime)
-        await this.setStatus(`Aktif selama ${uptime} | Mode: ${global.opts['self'] ? 'Private' : setting.groupOnly ? 'Hanya Grup' : 'Publik'} | MURSID BOT`).catch(_ => _)
+        await this.setStatus(`Bot berjalan selama ${uptime} | Mode: ${global.opts['self'] ? 'Private' : setting.groupOnly ? 'Hanya Grup' : 'Publik'} | ©BOTYNYAKAMU`).catch(_ => _)
         setting.status = new Date() * 1
     }
 
