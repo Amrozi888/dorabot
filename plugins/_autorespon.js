@@ -28,12 +28,12 @@ handler.all = async function (m, { isBlocked }) {
     // ketika ada yang invite/kirim link grup di chat pribadi
     if ((m.mtype === 'groupInviteMessage' || m.text.startsWith('https://chat') || m.text.startsWith('Buka tautan ini')) && !m.isBaileys && !m.isGroup) {
         this.sendButton(m.chat, `┌〔 Undang Bot ke Grup 〕
-├ 3  Hari / Rp 10,000
-├ 7  Hari / Rp 20,000
-├ 12 Hari / Rp 30,000
-├ 16 Hari / Rp 40,000
-├ Permanen / Rp 100,000
-└────
+╠➥ *1 Bulan* :      *Rp 20.000*
+╠➥ *2 bulan* : *Rp 40.000*
+╠➥ *8 bulan* :   *Rp 160.000*
+║
+╠═〘 PEMBAYARAN 〙 ═
+╠➥ Dana, Dan Pulsa
 
 https://github.com/ariffb25/stikerinbot
 `.trim(), '© BOTYNYAKAMU', 'Pemilik Bot', ',owner', m)
@@ -66,7 +66,7 @@ https://github.com/ariffb25/stikerinbot
     if (new Date() * 1 - setting.status > 1000) {
         let _uptime = process.uptime() * 1000
         let uptime = clockString(_uptime)
-        await this.setStatus(`Aktif Selama ${uptime} | Mode: ${global.opts['self'] ? 'Private' : setting.groupOnly ? 'Hanya Grup' : 'Publik'} | ©BOTYNYAKAMU`).catch(_ => _)
+        await this.setStatus(`⌚Aktif Selama ${uptime} | Mode: ${global.opts['self'] ? 'Private' : setting.groupOnly ? 'Hanya Grup' : 'Publik🦸'} | ©BOTYNYAKAMU`).catch(_ => _)
         setting.status = new Date() * 1
     }
 
